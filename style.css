@@ -1,0 +1,67 @@
+:root {
+    --bg-color: #0b141c;
+    --card-bg: #16222f;
+    --accent-blue: #2481cc;
+    --text-main: #ffffff;
+    --text-muted: #7e8b98;
+    --green: #2ecc71;
+}
+.light-theme {
+    --bg-color: #f0f4f8;
+    --card-bg: #ffffff;
+    --accent-blue: #1a73e8;
+    --text-main: #1c1c1c;
+    --text-muted: #5f6368;
+}
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header {
+    width: 100%; max-width: 450px;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 15px; box-sizing: border-box;
+}
+.user-info { display: flex; align-items: center; gap: 10px; }
+.avatar { background: var(--accent-blue); width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; }
+.settings-btn { background: none; border: none; font-size: 20px; cursor: pointer; color: var(--text-main); }
+.wallet-container { width: 100%; max-width: 450px; padding: 10px 15px; box-sizing: border-box; }
+
+/* Баннер */
+.welcome-banner { background: rgba(36, 129, 204, 0.08); border: 1px solid rgba(36, 129, 204, 0.25); border-radius: 14px; padding: 12px; margin-bottom: 15px; }
+.welcome-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.welcome-header h3 { margin: 0; font-size: 13px; color: var(--text-muted); }
+.badge-verif { background: rgba(46, 204, 113, 0.15); color: #2ecc71; font-size: 10px; padding: 2px 6px; border-radius: 20px; font-weight: bold; }
+.welcome-text { margin: 0; font-size: 12px; line-height: 1.4; color: var(--text-main); }
+.mention { color: #3498db; text-decoration: none; font-weight: bold; }
+
+/* Баланс и действия */
+.balance-card { background: linear-gradient(135deg, #162a45, var(--accent-blue)); border-radius: 16px; padding: 20px; text-align: center; margin-bottom: 15px; }
+.balance-label { color: rgba(255,255,255,0.7); font-size: 13px; margin: 0; }
+.balance-amount { font-size: 32px; margin: 5px 0 0 0; }
+.action-buttons { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 15px; }
+.action-btn { flex: 1; background: var(--card-bg); border: none; color: var(--text-main); padding: 10px; border-radius: 12px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 12px; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+
+/* Ракетка */
+.crypto-rates { background: var(--card-bg); border-radius: 14px; padding: 10px 15px; margin-bottom: 15px; }
+.rate-item { display: flex; justify-content: space-between; padding: 6px 0; font-size: 14px; }
+.crash-game { background: var(--card-bg); border-radius: 16px; padding: 15px; margin-bottom: 20px; }
+.game-title { font-size: 15px; color: var(--accent-blue); margin-top: 0; }
+.game-screen { background: #070c12; height: 160px; border-radius: 12px; position: relative; overflow: hidden; display: flex; justify-content: center; align-items: center; }
+.multiplier { font-size: 38px; color: var(--green); font-weight: bold; z-index: 2; }
+.rocket { font-size: 32px; position: absolute; bottom: 10px; left: 10px; transition: bottom 0.05s linear, left 0.05s linear, transform 0.05s linear; }
+.bet-controls { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+.bet-input { background: #070c12; border: 1px solid #233549; color: white; padding: 10px; border-radius: 8px; text-align: center; }
+.start-btn { background: var(--accent-blue); color: white; border: none; padding: 12px; border-radius: 8px; font-weight: bold; cursor: pointer; }
+
+/* Настройки */
+.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); justify-content: center; align-items: center; z-index: 10; }
+.modal-content { background: var(--card-bg); padding: 20px; border-radius: 16px; width: 80%; max-width: 320px; }
+.setting-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 14px; }
+.setting-row select, .setting-row input { background: #070c12; border: 1px solid #233549; color: white; padding: 5px; border-radius: 6px; }
+.close-btn { width: 100%; padding: 8px; background: #e74c3c; color: white; border: none; border-radius: 8px; cursor: pointer; margin-top: 10px; }
