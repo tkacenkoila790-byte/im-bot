@@ -7,7 +7,7 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, WebAppInfo
 API_TOKEN = '8908913545:AAFqVtBWMZNTrJQKGJxDPyi3wsSHC9iv77Y'
 
 # URL вашего приложения на Render (строго с https:// и без слеша на конце)
-BASE_URL = 'https://onrender.com'
+BASE_URL = 'https://im-bot-je1b.onrender.com'
 WEBHOOK_PATH = f'/webhook/{API_TOKEN}'
 WEBHOOK_URL = f'{BASE_URL}{WEBHOOK_PATH}'
 
