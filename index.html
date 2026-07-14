@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Wallet App</title>
+    <!-- Подключение Telegram WebApp API -->
+    <script src="https://telegram.org"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+    <header class="header">
+        <div class="user-info">
+            <div class="avatar">?</div>
+            <span class="status">Загрузка...</span>
+        </div>
+        <button class="settings-btn" onclick="toggleSettings()">⚙️</button>
+    </header>
+
+    <main class="wallet-container">
+        <!-- Официальный баннер -->
+        <div class="welcome-banner">
+            <div class="welcome-header">
+                <span class="badge-verif">🛡️ Проверено</span>
+                <h3>Официальное обращение</h3>
+            </div>
+            <p class="welcome-text">
+                Здравствуй мой друг, ты попал в крипто бота основного на компании <a href="https://t.me" target="_blank" class="mention">@send</a>, данная компания полностью дала разрешение и подтвердила что данный бот не нарушает правил платформы телеграмма, а также не занимается мошенической схемой.
+            </p>
+        </div>
+
+        <!-- Карточка баланса -->
+        <div class="balance-card">
+            <p class="balance-label">Доступный баланс</p>
+            <h1 class="balance-amount">0.00 USD</h1> 
+        </div>
+
+        <!-- Кнопки действий -->
+        <div class="action-buttons">
+            <button class="action-btn"><span>➕</span>Пополнить</button>
+            <button class="action-btn"><span>📤</span>Вывести</button>
+            <button class="action-btn" onclick="openP2P()"><span>🤝</span>P2P Маркет</button>
+        </div>
+
+        <!-- Курсы валют -->
+        <div class="crypto-rates">
+            <div class="rate-item">
+                <span class="coin">💎 TON</span>
+                <span class="price">$5.42</span>
+            </div>
+            <div class="rate-item">
+                <span class="coin">🪙 BTC</span>
+                <span class="price">$64,250</span>
+            </div>
+        </div>
+
+        <!-- Игра Ракетка -->
+        <section class="crash-game">
+            <h2 class="game-title">🚀 1WIN CRASH (Ракетка)</h2>
+            <div class="game-screen">
+                <div class="multiplier" id="multiplier">1.00x</div>
+                <div class="rocket" id="rocket">🚀</div>
+            </div>
+            <div class="bet-controls">
+                <input type="number" class="bet-input" value="10" min="1">
+                <button class="start-btn" onclick="startRocket()">СТАРТ</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Окно настроек -->
+    <div class="modal" id="settingsModal">
+        <div class="modal-content">
+            <h3>Настройки</h3>
+            <div class="setting-row">
+                <label>Язык:</label>
+                <select><option>Русский</option><option>English</option></select>
+            </div>
+            <div class="setting-row">
+                <label>Валюта:</label>
+                <select><option>USD</option><option>RUB</option></select>
+            </div>
+            <div class="setting-row">
+                <label>Тема:</label>
+                <select id="themeSelect" onchange="changeTheme()">
+                    <option value="dark">Темная</option>
+                    <option value="light">Светлая</option>
+                </select>
+            </div>
+            <div class="setting-row">
+                <label>Номер телефона:</label>
+                <input type="tel" placeholder="+7 (999) 000-00-00">
+            </div>
+            <button class="close-btn" onclick="toggleSettings()">Закрыть</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
